@@ -1,0 +1,1027 @@
+[{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 1,
+  "End Range" : 1000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "General",
+  "Start Range" : 1001,
+  "End Range" : 2000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "Concrete",
+  "Start Range" : 2001,
+  "End Range" : 3000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "Architecture",
+  "Start Range" : 3001,
+  "End Range" : 4000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "Steel",
+  "Start Range" : 4001,
+  "End Range" : 5000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "Geotechnical",
+  "Start Range" : 5001,
+  "End Range" : 6000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "Infrastructure",
+  "Start Range" : 6001,
+  "End Range" : 7000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "Plumbing",
+  "Start Range" : 7001,
+  "End Range" : 8000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Civil",
+  "Section" : "MEP",
+  "Start Range" : 8001,
+  "End Range" : 9000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Electrical",
+  "Section" : "General",
+  "Start Range" : 9001,
+  "End Range" : 10000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 10001,
+  "End Range" : 11000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Electrical",
+  "Section" : "Primary",
+  "Start Range" : 11001,
+  "End Range" : 12000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Electrical",
+  "Section" : "MEP",
+  "Start Range" : 12001,
+  "End Range" : 13000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "I&C",
+  "Section" : "General",
+  "Start Range" : 13001,
+  "End Range" : 14000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 14001,
+  "End Range" : 15000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "I&C",
+  "Section" : "Automation",
+  "Start Range" : 15001,
+  "End Range" : 16000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "QS",
+  "Section" : "QS",
+  "Start Range" : 16001,
+  "End Range" : 17000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "General",
+  "Start Range" : 17001,
+  "End Range" : 18000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 18001,
+  "End Range" : 19000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 19001,
+  "End Range" : 20000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "HVAC",
+  "Start Range" : 20001,
+  "End Range" : 21000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "Firefighting",
+  "Start Range" : 21001,
+  "End Range" : 22000
+},
+{
+  "Originator" : "Nooter Eriksen Inc.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "NEN",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 300001,
+  "End Range" : 300500
+},
+{
+  "Originator" : "HANWHA POWER SYSTEMS",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "HPS",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 300501,
+  "End Range" : 301000
+},
+{
+  "Originator" : "NEM Energy B.V. Branch Germany",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "NEM",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 301001,
+  "End Range" : 301500
+},
+{
+  "Originator" : "Nantong HyoSung Transformer Co., LTD.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "HYO",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 301501,
+  "End Range" : 302000
+},
+{
+  "Originator" : "TORMENE INDUSTRIALE SRL",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TIS",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 302001,
+  "End Range" : 302500
+},
+{
+  "Originator" : "Wahah Electric Supply Company of Saudi Arabia",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "WES",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 302501,
+  "End Range" : 303000
+},
+{
+  "Originator" : "Elsewedy Electric for Electrical Products",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "EEP",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 303001,
+  "End Range" : 303500
+},
+{
+  "Originator" : "Jeddah Cables Company",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "JCC",
+  "Discipline" : "Electrical",
+  "Section" : "Primary",
+  "Start Range" : 303501,
+  "End Range" : 304000
+},
+{
+  "Originator" : "C&S Electric",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "CSE",
+  "Discipline" : "Electrical",
+  "Section" : "Primary",
+  "Start Range" : 304001,
+  "End Range" : 304500
+},
+{
+  "Originator" : "Tranter Heat Exchangers (Beijing) Co, Ltd.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "THE",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 304501,
+  "End Range" : 305000
+},
+{
+  "Originator" : "Sigma Thermal Middle East FZCO",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "STH",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 305001,
+  "End Range" : 305500
+},
+{
+  "Originator" : "Hitachi Energy Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "HEL",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 305501,
+  "End Range" : 306000
+},
+{
+  "Originator" : "MeTAS FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "MET",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 306001,
+  "End Range" : 306500
+},
+{
+  "Originator" : "Gas Flow Solutions BV",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "GFS",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 306501,
+  "End Range" : 307000
+},
+{
+  "Originator" : "KAESER KOMPRESSOREN FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "KKF",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 307001,
+  "End Range" : 307500
+},
+{
+  "Originator" : "KSB Pumps Arabia",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "KSB",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 307501,
+  "End Range" : 308000
+},
+{
+  "Originator" : "Emerson FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "EMF",
+  "Discipline" : "I&C",
+  "Section" : "Automation",
+  "Start Range" : 308001,
+  "End Range" : 308500
+},
+{
+  "Originator" : "Nour for Electrical and Electronic Industries",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "NEE",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 308501,
+  "End Range" : 309000
+},
+{
+  "Originator" : "Elsewedy cables LTD",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "ECL",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 309001,
+  "End Range" : 309500
+},
+{
+  "Originator" : "C&S Electric Bus Duct",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "CSB",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 309501,
+  "End Range" : 310000
+},
+{
+  "Originator" : "Alfanar Company",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "FAN",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 310001,
+  "End Range" : 310500
+},
+{
+  "Originator" : "Chloride SAS",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "CHL",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 310501,
+  "End Range" : 311000
+},
+{
+  "Originator" : "United Transformers Electric Company UTEC",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "UTEC",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 311001,
+  "End Range" : 311500
+},
+{
+  "Originator" : "Mid East Cable Support Solutions",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "MEC",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 311501,
+  "End Range" : 312000
+},
+{
+  "Originator" : "WH-STEEL CO., LTD",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "WHS",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 312001,
+  "End Range" : 312500
+},
+{
+  "Originator" : "Sieyuan Electric Co.,Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SEL",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 312501,
+  "End Range" : 313000
+},
+{
+  "Originator" : "Patterson Pump Company LTD",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "PPC",
+  "Discipline" : "Civil",
+  "Section" : "MEP",
+  "Start Range" : 313001,
+  "End Range" : 313500
+},
+{
+  "Originator" : "Solution Power Partner SAL (Offshore)",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SPP",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 313501,
+  "End Range" : 314000
+},
+{
+  "Originator" : "BRAY CONTROLS MIDDLE EAST DMCC",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "BCM",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 314001,
+  "End Range" : 314500
+},
+{
+  "Originator" : "Petrostar Valve FZC",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "PSV",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 314501,
+  "End Range" : 315000
+},
+{
+  "Originator" : "Siemens Energy Digitalization (KSA)",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SED",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 315001,
+  "End Range" : 315500
+},
+{
+  "Originator" : "Fluence Middle East FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "FME",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 315501,
+  "End Range" : 316000
+},
+{
+  "Originator" : "TARNOS S.A.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TAR",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 316001,
+  "End Range" : 316500
+},
+{
+  "Originator" : "GEA BGR ENERGY SYSTEM INDIA LIMITED",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "GEA",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 316501,
+  "End Range" : 317000
+},
+{
+  "Originator" : "Hyundai Heavy Industries Turbomachinery Co., Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "HHI",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 317001,
+  "End Range" : 317500
+},
+{
+  "Originator" : "Sulzer Pumps Suzhou Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SPS",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 317501,
+  "End Range" : 318000
+},
+{
+  "Originator" : "Resisturk Elektrik ve Guc Direncleri Tic. San. Ltd. Sti.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "RES",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 318001,
+  "End Range" : 318500
+},
+{
+  "Originator" : "Torishima Pump MFG. Co.Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TPM",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 318501,
+  "End Range" : 319000
+},
+{
+  "Originator" : "BAHRA ADVANCED CABLEMANUFACTURE CO. LTD.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "BAC",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 319001,
+  "End Range" : 319500
+},
+{
+  "Originator" : "De Nora Water Technologies FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "DNW",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 319501,
+  "End Range" : 320000
+},
+{
+  "Originator" : "Baker Hughes Saudi Arabia for Industry",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "BHS",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 320001,
+  "End Range" : 320500
+},
+{
+  "Originator" : "SAFI GROUP SRL",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SGS",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 320501,
+  "End Range" : 321000
+},
+{
+  "Originator" : "Al Nafie Metal Industries CO. LTD. (Supplier)",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "NMS",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 321001,
+  "End Range" : 321500
+},
+{
+  "Originator" : "Integrity and Corrosion Experts Canada ICE Inc.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "ICE",
+  "Discipline" : "Electrical",
+  "Section" : "Primary",
+  "Start Range" : 321501,
+  "End Range" : 322000
+},
+{
+  "Originator" : "Elsewedy Special Cable",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "ESC",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 322001,
+  "End Range" : 322500
+},
+{
+  "Originator" : "HENAN WEIHUA HEAVY MACHINERY CO., LTD",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "HHM",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 322501,
+  "End Range" : 323000
+},
+{
+  "Originator" : "POWER TRADING T&D",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "PTD",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 323001,
+  "End Range" : 323500
+},
+{
+  "Originator" : "BRAY CONTROLS MIDDLE EAST DMCC",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "BCM",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 314001,
+  "End Range" : 314500
+},
+{
+  "Originator" : "LESER GmbH Co. KG",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "LGC",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 323501,
+  "End Range" : 324000
+},
+{
+  "Originator" : "BML ENERGY AUTOMATION SYSTEM LLC.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "BML",
+  "Discipline" : "I&C",
+  "Section" : "Automation",
+  "Start Range" : 324001,
+  "End Range" : 324500
+},
+{
+  "Originator" : "LISEGA SE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "LIS",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 324501,
+  "End Range" : 325000
+},
+{
+  "Originator" : "Siemens Energy",
+  "Originator Type" : "Consortium",
+  "Originator Code" : "SE",
+  "Discipline" : "Electrical",
+  "Section" : "Primary",
+  "Start Range" : 60001,
+  "End Range" : 65000
+},
+{
+  "Originator" : "Siemens Energy",
+  "Originator Type" : "Consortium",
+  "Originator Code" : "SE",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 60001,
+  "End Range" : 65000
+},
+{
+  "Originator" : "Al Nafie Metal Industries CO. LTD. (Supplier)",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "NMS",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 321001,
+  "End Range" : 321500
+},
+{
+  "Originator" : "Fluence Middle East FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "FME",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 315501,
+  "End Range" : 316000
+},
+{
+  "Originator" : "Gas Flow Solutions BV",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "GFS",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 306501,
+  "End Range" : 307000
+},
+{
+  "Originator" : "Fluence Middle East FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "FME",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 315501,
+  "End Range" : 316000
+},
+{
+  "Originator" : "GEA BGR ENERGY SYSTEM INDIA LIMITED",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "GEA",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 316501,
+  "End Range" : 317000
+},
+{
+  "Originator" : "MeTAS FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "MET",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 306001,
+  "End Range" : 306500
+},
+{
+  "Originator" : "Mid East Cable Support Solutions",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "MEC",
+  "Discipline" : "Electrical",
+  "Section" : "Secondary",
+  "Start Range" : 311501,
+  "End Range" : 312000
+},
+{
+  "Originator" : "Nooter Eriksen Inc.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "NEN",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 300001,
+  "End Range" : 300500
+},
+{
+  "Originator" : "SAFI GROUP SRL",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SGS",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 320501,
+  "End Range" : 321000
+},
+{
+  "Originator" : "Torishima Pump MFG. Co.Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TPM",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 318501,
+  "End Range" : 319000
+},
+{
+  "Originator" : "WH-STEEL CO., LTD",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "WHS",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 312001,
+  "End Range" : 312500
+},
+{
+  "Originator" : "Sieyuan Electric Co.,Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SEL",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 312501,
+  "End Range" : 313000
+},
+{
+  "Originator" : "ACCURATE FLOW CONTROL VALVES",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "ACV",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 325001,
+  "End Range" : 325500
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "Outsourcing",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 14001,
+  "End Range" : 15000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "Outsourcing",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 18001,
+  "End Range" : 19000
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "Outsourcing",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 19001,
+  "End Range" : 20000
+},
+{
+  "Originator" : "KSB SAS",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "KSS",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 325501,
+  "End Range" : 326000
+},
+{
+  "Originator" : "SEVEN SEAS S.A.S.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SEV",
+  "Discipline" : "General",
+  "Section" : "General",
+  "Start Range" : 326001,
+  "End Range" : 326500
+},
+{
+  "Originator" : "Dresser Al Rushaid Valve and Instrument Co. Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "DVR",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 326501,
+  "End Range" : 327000
+},
+{
+  "Originator" : "Trillium Flow Technologies Suzhou Ltd",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TFT",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 327001,
+  "End Range" : 327500
+},
+{
+  "Originator" : "EGME DMCC",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "EGM",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 327501,
+  "End Range" : 328000
+},
+{
+  "Originator" : "H.P. Valves Oldenzaal B.V.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "HPV",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 328001,
+  "End Range" : 328500
+},
+{
+  "Originator" : "TRAVERSE INTERNATIONAL INSULATION MATERIALS LLC",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TII",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 328501,
+  "End Range" : 329000
+},
+{
+  "Originator" : "COMMERCIALE TUBI ACCIAIO S.p.A.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "CTA",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 329001,
+  "End Range" : 329500
+},
+{
+  "Originator" : "PETROPIPE FZE",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "PPF",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 329501,
+  "End Range" : 330000
+},
+{
+  "Originator" : "Dr. Thiedig GmbH and Co KG",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "DTH",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 330001,
+  "End Range" : 330500
+},
+{
+  "Originator" : "Al Humaidi Saqer Al Mawraqi for Supply and Trading Company",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "HSM",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 330501,
+  "End Range" : 331000
+},
+{
+  "Originator" : "Technical Solution Trading (TST).",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TST",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 331001,
+  "End Range" : 331500
+},
+{
+  "Originator" : "Water and Environment Technologies Company (WETICO)",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "WET",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 331501,
+  "End Range" : 332000
+},
+{
+  "Originator" : "IMI Critical Engineering Korea",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "IMI",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 332001,
+  "End Range" : 332500
+},
+{
+  "Originator" : "EEPSP",
+  "Originator Type" : "EEPSP",
+  "Originator Code" : "EEPSP",
+  "Discipline" : "Mechanical",
+  "Section" : "General",
+  "Start Range" : 1,
+  "End Range" : 1000
+},
+{
+  "Originator" : "Trillium Flow Technologies Korea. Inc.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "TFK",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 332501,
+  "End Range" : 333000
+},
+{
+  "Originator" : "Air Products Abdullah Hashim Gases",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "AIR",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 333001,
+  "End Range" : 333500
+},
+{
+  "Originator" : "KWI France",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "KWI",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 333501,
+  "End Range" : 334000
+},
+{
+  "Originator" : "AIEcon Gulf engineering consultants",
+  "Originator Type" : "Consultant",
+  "Originator Code" : "AIE",
+  "Discipline" : "Civil",
+  "Section" : "Infrastructure",
+  "Start Range" : 6001,
+  "End Range" : 7000
+},
+{
+  "Originator" : "SEVEN SEAS and ASCO.",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SSA",
+  "Discipline" : "Mechanical",
+  "Section" : "Process",
+  "Start Range" : 334001,
+  "End Range" : 334500
+},
+{
+  "Originator" : "Emerson Saudi Arabia LLC",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "ESA",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 334501,
+  "End Range" : 335000
+},
+{
+  "Originator" : "SOR Controls Group",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "SOR",
+  "Discipline" : "I&C",
+  "Section" : "Instrumentation",
+  "Start Range" : 335001,
+  "End Range" : 335500
+},
+{
+  "Originator" : "JFC Corporation",
+  "Originator Type" : "Supplier",
+  "Originator Code" : "JFC",
+  "Discipline" : "Mechanical",
+  "Section" : "Plant Design",
+  "Start Range" : 335501,
+  "End Range" : 336000
+}
+]

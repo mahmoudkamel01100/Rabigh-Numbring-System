@@ -1,0 +1,452 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rabigh Numbring System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo img {
+        height: 100px;
+        width: 300px;
+      }
+      select, textarea {
+        width: 60%;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px 5px 10px 0;
+        cursor: pointer;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #0052a3;
+      }
+      .btn-edit {
+        background-color: #ffc107;
+        color: #333;
+      }
+      .btn-edit:hover {
+        background-color: #e0a800;
+      }
+      .btn-save {
+        background-color: #28a745;
+        color: white;
+      }
+      .btn-save:hover {
+        background-color: #218838;
+      }
+      .btn-delete {
+        background-color: #dc3545;
+        color: white;
+      }
+      .btn-delete:hover {
+        background-color: #c82333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        margin-top: 10px;
+      }
+      th, td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-size: 13px;
+        min-width: 50px;
+        white-space: nowrap;
+      }
+      th {
+        background-color: #0066cc;
+        color: white;
+      }
+      input.table-input {
+        border: none;
+        padding: 6px;
+        font-size: 13px;
+        background: transparent;
+        box-sizing: content-box;
+        min-width: 20px;
+      }
+      input.table-input:focus {
+        outline: none;
+        background-color: #eef;
+      }
+      .actions-btns {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .actions-btns button {
+        margin: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="logo">
+    <img src="https://res.cloudinary.com/popcorn-aflam/image/upload/v1751059261/afv6y04wdfn7b2og2emv.png" alt="Logo" />
+  </div>
+
+  <div style="text-align: center;">
+    <label for="columnSelect" style="font-weight: bold; margin-bottom: 6px; display: inline-block;">
+      Select Column to Append:
+    </label><br />
+    <select id="columnSelect" aria-label="Select column to append"></select><br /><br />
+
+    <textarea id="columnData" placeholder="Paste your column data here, one value per line..." rows="5"></textarea><br />
+    <button onclick="appendToColumn()">Append to Column</button>
+    <button onclick="exportToExcel()">Export to Excel</button>
+    <button id="importBtn">Import from Excel</button>
+    <button onclick="autoFillCodes()">Auto-Fill Codes</button>
+    <input type="file" id="fileInput" style="display:none" accept=".xlsx,.xls" />
+  </div>
+
+  <!-- Action buttons for selected rows -->
+  <div class="actions-btns">
+    <button id="editSaveBtn" class="btn-edit" onclick="toggleEditSave()">Edit Selected</button>
+    <button class="btn-delete" onclick="deleteSelectedRows()">Delete Selected</button>
+  </div>
+
+  <table id="dataTable">
+    <thead>
+      <tr id="tableHeader">
+        <th><!-- no select all checkbox --></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+  const headers = [
+    "Project Name", "Originator", "Originator Type", "Department", "Discipline", "Section", "KKS",
+    "Document No", "Standard No", "Subject", "Purpose", "Internal Planned Date",
+    "Client Planned Date", "Submit To Entity", "Rev No", "Last Status",
+    "Doc Owner", "Weight Rank", "Order From Code"
+  ];
+
+  const columnSelect = document.getElementById("columnSelect");
+  const tableHeader = document.getElementById("tableHeader");
+  const tbody = document.querySelector("#dataTable tbody");
+  const importBtn = document.getElementById("importBtn");
+  const fileInput = document.getElementById("fileInput");
+  const editSaveBtn = document.getElementById("editSaveBtn");
+
+  headers.forEach((h, i) => {
+    const option = document.createElement("option");
+    option.value = i;
+    option.textContent = h;
+    columnSelect.appendChild(option);
+  });
+
+  headers.forEach(h => {
+    const th = document.createElement("th");
+    th.textContent = h;
+    tableHeader.appendChild(th);
+  });
+
+  let tableData = Array(headers.length).fill(null).map(() => []);
+
+  function autoResizeInput(input) {
+    const tmpSpan = document.createElement('span');
+    tmpSpan.style.visibility = 'hidden';
+    tmpSpan.style.whiteSpace = 'pre';
+    tmpSpan.style.font = window.getComputedStyle(input).font;
+    tmpSpan.textContent = input.value || input.placeholder || '';
+    document.body.appendChild(tmpSpan);
+    input.style.width = tmpSpan.getBoundingClientRect().width + 10 + 'px';
+    document.body.removeChild(tmpSpan);
+  }
+
+  function appendToColumn() {
+    const colIndex = parseInt(columnSelect.value);
+    const textarea = document.getElementById("columnData");
+    const newValues = textarea.value.split('\n').map(s => s.trim()).filter(s => s !== '');
+    if (!tableData[colIndex]) tableData[colIndex] = [];
+    tableData[colIndex] = tableData[colIndex].concat(newValues);
+    renderTable();
+    textarea.value = '';
+  }
+
+  function renderTable() {
+    tbody.innerHTML = '';
+    const maxRows = Math.max(...tableData.map(col => col.length));
+    for (let row = 0; row < maxRows; row++) {
+      const tr = document.createElement("tr");
+
+      const tdCheck = document.createElement("td");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      tr.appendChild(tdCheck);
+      tdCheck.appendChild(checkbox);
+
+      headers.forEach((header, col) => {
+        const td = document.createElement("td");
+        const input = document.createElement("input");
+        input.type = "text";
+        input.className = "table-input";
+        input.value = tableData[col][row] || "";
+        input.disabled = true;
+        autoResizeInput(input);
+        input.addEventListener("input", e => {
+          tableData[col][row] = e.target.value;
+          autoResizeInput(e.target);
+        });
+        td.appendChild(input);
+        tr.appendChild(td);
+      });
+
+      tbody.appendChild(tr);
+    }
+    resetEditSaveButton();
+  }
+
+  function exportToExcel() {
+    const maxRows = Math.max(...tableData.map(col => col.length));
+    const data = [];
+    for (let i = 0; i < maxRows; i++) {
+      const rowObj = {};
+      headers.forEach((header, col) => {
+        rowObj[header] = (tableData[col] && tableData[col][i]) ? tableData[col][i] : '';
+      });
+      data.push(rowObj);
+    }
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Data");
+    XLSX.writeFile(wb, "data.xlsx");
+  }
+
+  importBtn.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      const data = evt.target.result;
+      const workbook = XLSX.read(data, {type: 'binary'});
+      const firstSheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[firstSheetName];
+      const range = XLSX.utils.decode_range(worksheet['!ref']);
+      let importedData = Array(headers.length).fill(null).map(() => []);
+      for(let R = range.s.r; R <= range.e.r; ++R) {
+        headers.forEach((header, colIndex) => {
+          const cellAddress = XLSX.utils.encode_cell({c: colIndex, r: R});
+          const cell = worksheet[cellAddress];
+          let cellValue = cell ? cell.v : '';
+          if (cell && cell.t === 'n' && cell.z && cell.z.toLowerCase().includes('yy')) {
+            const utc_days = cell.v - 25569;
+            const utc_value = utc_days * 86400;
+            const date_info = new Date(utc_value * 1000);
+            cellValue = date_info.toISOString().split('T')[0];
+          }
+          importedData[colIndex].push(cellValue.toString());
+        });
+      }
+      importedData.forEach((colData, i) => {
+        if (!tableData[i]) tableData[i] = [];
+        tableData[i] = tableData[i].concat(colData);
+      });
+      renderTable();
+      fileInput.value = '';
+    };
+    reader.readAsBinaryString(file);
+  });
+
+  function getSelectedRowIndexes() {
+    const selectedIndexes = [];
+    tbody.querySelectorAll('tr').forEach((tr, idx) => {
+      const cb = tr.querySelector('input[type="checkbox"]');
+      if(cb && cb.checked) selectedIndexes.push(idx);
+    });
+    return selectedIndexes;
+  }
+
+  let editing = false;
+
+  function toggleEditSave() {
+    const indexes = getSelectedRowIndexes();
+    if (indexes.length === 0) {
+      alert('Please Select One Row At Least To Edit');
+      return;
+    }
+    if (!editing) {
+      // تفعيل التعديل
+      indexes.forEach(i => {
+        const row = tbody.children[i];
+        row.querySelectorAll("input.table-input").forEach(input => input.disabled = false);
+      });
+      editSaveBtn.textContent = "Save Selected";
+      editSaveBtn.classList.remove('btn-edit');
+      editSaveBtn.classList.add('btn-save');
+      editing = true;
+    } else {
+      // حفظ التعديلات
+      indexes.forEach(i => {
+        const row = tbody.children[i];
+        row.querySelectorAll("input.table-input").forEach((input, idx) => {
+          input.disabled = true;
+          tableData[idx][i] = input.value;
+        });
+      });
+      editSaveBtn.textContent = "Edit Selected";
+      editSaveBtn.classList.remove('btn-save');
+      editSaveBtn.classList.add('btn-edit');
+      editing = false;
+    }
+  }
+
+  function resetEditSaveButton() {
+    editing = false;
+    editSaveBtn.textContent = "Edit Selected";
+    editSaveBtn.classList.remove('btn-save');
+    editSaveBtn.classList.add('btn-edit');
+  }
+
+  function deleteSelectedRows() {
+    const indexes = getSelectedRowIndexes();
+    if(indexes.length === 0) {
+      alert('Please Select One Row At Least To Delete');
+      return;
+    }
+    const sortedIndexes = indexes.sort((a,b) => b - a);
+    sortedIndexes.forEach(i => {
+      headers.forEach((_, colIndex) => {
+        if(tableData[colIndex]) tableData[colIndex].splice(i, 1);
+      });
+    });
+    renderTable();
+  }
+
+  function similarity(str1, str2) {
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+    let longer = str1.length > str2.length ? str1 : str2;
+    let shorter = str1.length > str2.length ? str2 : str1;
+    let longerLength = longer.length;
+    if (longerLength === 0) return 1.0;
+    let same = 0;
+    for (let i = 0; i < shorter.length; i++) {
+      if (longer.includes(shorter[i])) same++;
+    }
+    return same / longerLength;
+  }
+
+    async function autoFillCodes() {
+    try {
+      const [dccResponse, rangeResponse] = await Promise.all([
+        fetch('json/DCC.json'),
+        fetch('json/Range.json')
+      ]);
+
+      const codes = await dccResponse.json();
+      const ranges = await rangeResponse.json();
+
+      const subjectColIndex = headers.indexOf("Subject");
+      const docNoColIndex = headers.indexOf("Document No");
+      const kksColIndex = headers.indexOf("KKS");
+      
+
+      const originatorColIndex = headers.indexOf("Originator");
+      const originatorTypeColIndex = headers.indexOf("Originator Type");
+      const orderFromCodeColIndex = headers.indexOf("Order From Code");
+      const docOwnerColIndex = headers.indexOf("Doc Owner");
+      const submitToEntityColIndex = headers.indexOf("Submit To Entity");
+      const revNoColIndex = headers.indexOf("Rev No");
+      const projectColIndex = headers.indexOf("Project Name");
+      const standardNoColIndex = headers.indexOf("Standard No");
+
+
+
+
+      if (kksColIndex === -1 || originatorColIndex === -1 || originatorTypeColIndex === -1 || orderFromCodeColIndex === -1) {
+        alert("بعض الأعمدة المطلوبة غير موجودة في الجدول");
+        return;
+      }
+
+      const maxRows = Math.max(...tableData.map(col => col.length));
+      for (let row = 0; row < maxRows; row++) {
+        // ========== الجزء الخاص بـ DCC.json ==========
+        const subjectRaw = tableData[subjectColIndex][row] || "";
+        const shortSubject = subjectRaw.split("-").pop().trim();
+        const kksValue = tableData[kksColIndex][row] || "";
+
+        let bestMatch = null;
+        let bestScore = 0;
+
+        codes.forEach(entry => {
+          const score = similarity(shortSubject, entry.subject);
+          if (score > bestScore) {
+            bestScore = score;
+            bestMatch = entry;
+          }
+            if (!tableData[projectColIndex]) tableData[projectColIndex] = [];
+    tableData[projectColIndex][row] = "2011 Rabigh Combined Cycle Power Plant";
+          });
+
+        
+        if (bestMatch && bestScore > 0.3) {
+          if (!tableData[docNoColIndex]) tableData[docNoColIndex] = [];
+          tableData[docNoColIndex][row] = `2011-${kksValue}-${bestMatch.code}`;
+        }
+
+        // ========== الجزء الخاص بـ Range.json ==========
+        const originatorValue = (tableData[originatorColIndex][row] || "").trim();
+        const rangeMatch = ranges.find(r => r.Originator === originatorValue);
+
+        // ========== تعبئة Doc Owner بنفس قيمة Originator ==========
+  if (!tableData[docOwnerColIndex]) tableData[docOwnerColIndex] = [];
+  tableData[docOwnerColIndex][row] = originatorValue;
+
+  // ========== تعبئة Submit To Entity ==========
+  if (!tableData[submitToEntityColIndex]) tableData[submitToEntityColIndex] = [];
+  if (originatorValue === "EEPSP") {
+    tableData[submitToEntityColIndex][row] = "Saudi Electricity Company (SEC)";
+  } else {
+    tableData[submitToEntityColIndex][row] = "EEPSP";
+  }
+    if (!tableData[revNoColIndex]) tableData[revNoColIndex] = [];
+  tableData[revNoColIndex][row] = "00";
+
+  if (!tableData[projectColIndex]) tableData[projectColIndex] = [];
+  tableData[projectColIndex][row] = "2011 Rabigh Combined Cycle Power Plant";
+
+    if (!tableData[standardNoColIndex]) tableData[standardNoColIndex] = [];
+  tableData[standardNoColIndex][row] = tableData[docNoColIndex][row] || "";
+
+        if (rangeMatch) {
+          if (!tableData[originatorTypeColIndex]) tableData[originatorTypeColIndex] = [];
+          if (!tableData[orderFromCodeColIndex]) tableData[orderFromCodeColIndex] = [];
+
+          tableData[originatorTypeColIndex][row] = rangeMatch["Originator Type"] || "";
+          tableData[orderFromCodeColIndex][row] = rangeMatch["Originator Code"] || "";
+          
+        }
+      }
+
+      renderTable();
+    } catch (err) {
+      console.error("Error loading JSON or processing:", err);
+      alert("Error loading codes file. Make sure json/DCC.json and json/Range.json exist and are formatted correctly.");
+    }
+  }
+
+  </script>
+  </body>
+  </html>
